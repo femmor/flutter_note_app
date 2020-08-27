@@ -1,24 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_note/screens/note_list.dart';
 
 void main() {
   runApp(MaterialApp(
-    home: Home(),
-    debugShowCheckedModeBanner: false,
-  ));
-}
-
-class Home extends StatefulWidget {
-  @override
-  _HomeState createState() => _HomeState();
-}
-
-class _HomeState extends State<Home> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
-        child: Text("Flutter Note"),
-      ),
-    );
-  }
+      title: "Notes",
+      home: NoteList(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        // Define the default brightness and colors.
+        primaryColor: Colors.green[600],
+        accentColor: Colors.green[500],
+      )));
 }
